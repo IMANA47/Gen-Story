@@ -1,0 +1,117 @@
+# =========================
+# ENV VARIABLES / SECRETS
+# =========================
+.env
+.env.*
+*.env
+
+# =========================
+# PYTHON
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# =========================
+# VIRTUAL ENVIRONMENTS
+# =========================
+venv/
+env/
+ENV/
+.venv/
+
+# =========================
+# LOGS
+# =========================
+*.log
+logs/
+
+# =========================
+# DATABASE
+# =========================
+*.sqlite3
+*.db
+
+# =========================
+# JUPYTER NOTEBOOK
+# =========================
+.ipynb_checkpoints
+
+# =========================
+# VS CODE
+# =========================
+.vscode/
+
+# =========================
+# PYCHARM
+# =========================
+.idea/
+
+# =========================
+# MACOS
+# =========================
+.DS_Store
+
+# =========================
+# WINDOWS
+# =========================
+Thumbs.db
+desktop.ini
+
+# =========================
+# TEST / CACHE
+# =========================
+.pytest_cache/
+.coverage
+htmlcov/
+.cache/
+
+# =========================
+# NODE MODULES
+# =========================
+node_modules/
+
+# =========================
+# TEMP FILES
+# =========================
+tmp/
+temp/
+*.tmp
+
+# =========================
+# UPLOADS
+# =========================
+uploads/
+
+# =========================
+# AI MODELS / LARGE FILES
+# =========================
+*.ckpt
+*.pt
+*.pth
+*.onnx
+*.bin
+
+# =========================
+# API KEYS / CERTIFICATES
+# =========================
+*.pem
+*.key
+secrets.json
+credentials.json
