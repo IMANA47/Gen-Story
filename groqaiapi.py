@@ -1,6 +1,7 @@
 from groq import Groq
 
 from groqaikey import GROQ_API_KEY
+# pyrefly: ignore [untyped-import]
 import requests
 import openai
 

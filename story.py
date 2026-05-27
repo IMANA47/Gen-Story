@@ -1,5 +1,6 @@
 import groqaikey
 import json
+import os
 
 from groqaiapi import *
 
@@ -58,6 +59,7 @@ def getStoryInfos(story_text):
 
             json_response = getCompletion(prompt)
 
+            # pyrefly: ignore [missing-attribute]
             json_response = json_response.replace("```json", "")
             json_response = json_response.replace("```", "")
             json_response = json_response.strip()
@@ -113,17 +115,24 @@ print("Image prompt : " + image_prompt)
 with open("histoire.txt", "w", encoding="utf-8") as file:
 
     file.write(f"Titre : {title}\n\n")
+    # pyrefly: ignore [bad-argument-type]
     file.write(text)
 
+# dossier images (créé automatiquement si absent)
+os.makedirs("images", exist_ok=True)
 
+# dossier audio (créé automatiquement si absent)
+os.makedirs("audio", exist_ok=True)
+
+# génération image
 generateImage(
     image_prompt,
     resolution="1024x1792",
-    filename="histoire.png"
+    filename="images/histoire.png"
 )
 
-
 textToSpeech(
+    # pyrefly: ignore [unsupported-operation]
     title + "\n\n" + text,
-    "histoire.mp3"
+    "audio/histoire.mp3"
 )
